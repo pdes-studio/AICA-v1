@@ -1,0 +1,312 @@
+// FontAwesome
+
+@font-face {
+	font-family: "Font Awesome 5 Free";
+	src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+%fontAwesome{
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts */
+
+/* muli-regular - latin */
+@font-face {
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../fonts/muli-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/muli-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* muli-700 - latin */
+  @font-face {
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		 url('../fonts/muli-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/muli-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* muli-600 - latin */
+  @font-face {
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+		 url('../fonts/muli-v20-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/muli-v20-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* muli-800 - latin */
+  @font-face {
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: 800;
+	src: local(''),
+		 url('../fonts/muli-v20-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/muli-v20-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* muli-900 - latin */
+  @font-face {
+	font-family: 'Muli';
+	font-style: normal;
+	font-weight: 900;
+	src: local(''),
+		 url('../fonts/muli-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/muli-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+main{
+	min-height: calc(100vh - 60px);
+}
+
+img{ max-width: 100%;}
+
+*{
+	font-family: 'Muli';
+	font-weight: $regular;
+	// letter-spacing: 0.01rem;
+	text-decoration: none;
+	list-style: none;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+.focus-visible {
+	box-shadow: 0 0 0 2px lighten($laranja-principal, 20%);
+}
+
+h1, h2, h3{ font-weight: $black;}
+
+h1{
+	font-size: 2rem;
+	line-height: 130%;
+	text-align: center;
+	color: $azul-principal;
+}
+
+h2{ 
+	font-size: 1.75rem;
+	line-height: 130%;
+	text-align: center;
+	color: $azul-principal;
+}
+
+h3{ font-size: 1.25rem; }
+
+
+span, a{ font-size: 1rem; }
+
+p{ 
+	line-height: 170%; 
+	font-size: 1rem; 
+	color: $preto;
+	text-align: left;
+	max-width: 789px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+.container{
+	padding: 0 1.25rem;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.botao-cta{
+	display: block;
+	height: 56px;
+	max-width: 276px;
+	font-weight: $bold;
+	background: $laranja-principal;
+	text-align: center;
+	padding: 18px 32px;
+	color: $branco;
+	border-radius: 0.5rem;
+	margin: 0 auto;
+	line-height: 1;
+	position: relative;
+	transition: 0.3s ease-out;
+
+	&:hover{
+		background: $verde-principal;
+	}
+
+}
+
+.content {
+	max-width: 386px;
+	margin: 0 auto;
+	img.__icone{ 
+		display: block; 
+		max-width: 48px;
+		margin: 0 auto 12px;
+	}
+
+	h2{ 
+		margin: 0 auto;
+		margin-bottom: 24px;
+	}
+
+	p{
+		margin-bottom: 32px; 
+		text-align: center;
+		padding: 0 1rem;
+	}
+
+}
+
+
+._m-swipe{
+	overflow-x: auto;
+	margin: 32px auto;
+	padding: 0 20px;
+	max-width: 696px;
+	flex-flow: row;
+	> * {
+		width: 696px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-flow: row;
+
+		img{ max-height: 100px; max-width: 120px;}
+
+	}
+}
+
+
+.mobile-info{
+	color: $branco;
+	display: flex;
+	height: 56px;
+	max-width: 276px;
+	margin: 32px auto 0;
+	padding: 14px 0;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	background: $verde-principal;
+
+	p{  color: currentColor; font-size: 14px; font-weight: $semibold; margin: 0; }
+
+	img{ height: 32px; margin-right: 8px;}
+}
+
+
+@media only screen and (min-width: 768px){
+
+	.container{
+		padding: 0 2rem;
+	}
+
+	.mobile-info{ display: none;}
+
+	
+}
+
+@media only screen and (min-width: 1024px){
+
+
+	.container{
+		padding: 0;
+		max-width: 960px;
+	}
+
+	main{
+		min-height: calc(100vh - 90px);
+	}
+
+	.botao-cta{
+		margin: 0;
+	}
+
+	.content {
+		margin: 0;
+		img.__icone{ 
+			height: 60px;
+			display: block; 
+			margin: 0 0 24px;
+		}
+	
+		h2{ 
+			text-align: left;
+			margin: 0;
+			margin-bottom: 32px;
+		}
+	
+		p{
+			margin-bottom: 56px; 
+			text-align: left;
+			padding: 0rem;
+		}
+	}
+
+	._m-swipe{
+		overflow: auto;
+		margin: 56px auto;
+		padding: 0;
+		max-width: 789px;
+
+		> * { width: 100%; }
+	}
+
+	
+	
+	
+	
+
+}
+
+
+@media only screen and (min-width: 1280px) {
+
+	.container{
+		max-width: 1200px;
+	}
+
+	h1{ font-size: 3.25‬rem; }
+	
+	h2{ font-size: 2.25rem; }
+	
+	h3{ font-size: 1.25rem; }
+
+	p, a{ font-size: 1.125rem;}
+
+	.content {
+		max-width: 480px;
+	}
+
+	.btn-top{
+		height: 48px;
+		width: 48px;
+		background: $verde-principal;
+		display: block;
+		position: fixed;
+		bottom: 60px;
+		right: 40px;
+		border-radius: 100%;
+	}
+
+
+
+}

@@ -1,0 +1,114 @@
+.cartao-container{
+    margin-top: 48px;
+
+.cartao-item{
+    height: 260px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: $shadow-pattern;
+    margin-bottom: 24px;
+    overflow: hidden;
+
+    &:hover{
+        box-shadow: $shadow;
+        transform: scale(1.1);
+        transition: all .3s ease;
+
+    }
+
+    ._cabecalho{
+        position: relative;
+
+        .__capa{
+            display: block;
+            height: 160px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+            position: relative;
+            background: $cinza;
+            transition: .3s ease;;
+        }
+
+        .__ano{ 
+            display: block;
+            font-size: 16px;
+            font-weight: $semibold;
+            border-radius: 4px;
+            background: $azul-principal;
+            color: $branco;
+            padding: 8px 12px; 
+            position: absolute;
+            top: 18px;
+            right: 18px;
+        }
+    }
+
+    
+    ._info{
+        padding: 20px 24px 32px;
+        text-align: center;
+
+        .__titulo{
+            display: block;
+            font-size: 18px;
+            font-weight: $black;
+            color: $azul-principal;
+            margin-bottom: 8px;
+        }
+
+        .__subtitulo{
+            font-size: 14px;
+            color: $preto;
+            font-weight: $semibold;
+        }
+    }
+}
+
+}
+
+
+
+@media only screen and (min-width: 768px){
+
+    .cartao-container{
+
+        &::before, &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        clear: both;
+        
+    .cartao-item{
+        max-width: calc(50% - 2rem);
+        float: left;
+        margin: 1rem;
+        box-sizing: content-box;
+    }
+
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+    .cartao-container{
+
+        .cartao-item{
+            max-width: calc(33% - 24px);
+            margin: 0.75rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    .cartao-container{
+
+        .cartao-item{
+            max-width: calc(33% - 32px);
+            margin: 1rem;
+        }
+    }
+}

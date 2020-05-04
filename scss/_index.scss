@@ -1,0 +1,342 @@
+.hero{
+    min-height: 560px;
+    padding-top: 120px;
+    background-image: linear-gradient(180deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40.18%, rgba(1, 81, 201, 0) 130.09%), url(../img/background-mobile.png);
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+
+    .content{
+        text-align: center;
+        margin: 0 auto;
+        color: $branco;
+
+        h1{ margin-bottom: 32px; color: currentColor;}
+
+        p{
+            margin-bottom: 48px; 
+            color: currentColor;
+            text-align: center;
+        }
+    }
+}
+
+
+.introducao{
+    padding-top: 72px;
+
+    > p{ margin: 24px auto 48px; text-align: center;}
+
+    ._dados{
+
+        .__item{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+
+            &:nth-child(1) span{
+                color: $azul-principal;
+            }
+
+            &:nth-child(2) span{
+                color: $verde-principal;
+            }
+
+            &:nth-child(3) span{
+                color: $laranja-principal;
+            }
+
+            img{ 
+                height: 32px; 
+                width: auto; 
+                margin-bottom: 16px;
+            }
+
+            span{
+                font-size: 32px;
+                font-weight: $black;
+            }
+
+            p{ margin-top: 8px; text-align: center;}
+    
+        }
+
+    }
+}
+
+
+
+.atividades{
+    min-height: 560px;
+    margin-top: 72px;
+    padding-top: 48px;
+    background-image: linear-gradient(180deg, #0151C9 3.52%, rgba(1, 81, 201, 0.8) 60%, rgba(1, 81, 201, 0) 100%), url(../img/bg-atividades-mobile.png);
+    background-size: cover;
+    background-position: center;
+
+
+    .container{
+
+        .content h2, .content p{ color: $branco; }
+    }
+}
+
+.projetos{
+    margin-top: 72px;
+    .container > img{ display: block; margin: 48px auto 48px; }
+}
+
+.principios{
+    margin-top: 72px;
+    padding: 48px 0;
+    background-image: linear-gradient(180deg, rgba(1, 81, 201, 0.9) 0%, #0151C9 100%), url(../img/bg-principios-mobile.png);
+    background-size: cover;
+    background-position: center;
+
+    .container{ padding: 0;}
+    
+    .container h2{ color: $branco; margin: 24px auto;}
+
+
+        ._m-swipe{
+
+            ul li a { 
+                display: block;
+                img{ opacity: .3;}
+                &.ativo img{  opacity: 1; }
+            }
+
+        }
+
+
+        ._container-m-swipe{
+            position: relative;
+            padding: 0 1.25rem;
+
+            .__item{
+                display: block;
+                color: $branco;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                visibility: hidden;
+
+                * { text-align: center;}
+                p{ color: currentColor; margin-top: 16px; }
+
+                &.ativo{
+                    position: relative;
+                    visibility: visible;
+                }
+
+            }
+
+        }
+
+}
+
+
+
+.galeria{
+    margin-top: 72px;
+
+    .container .botao-cta{
+        margin-top: 48px;
+    }
+
+}
+
+.fale-conosco{
+    margin-top: 56px;
+    padding-top: 72px;
+    background: url(../img/bg-coracoes-mobile.png);
+    background-size: cover;
+    color: $branco;
+
+    h2{ color: currentColor}
+    p{ color: currentColor}
+
+    .__img{
+        margin: 48px auto 0;
+        object-fit: contain;
+    }
+}
+
+
+
+.parceiros{
+    margin-top: 72px;
+
+    h2{ margin-bottom: 24px;}
+    p{ text-align: center;}
+}
+
+@media only screen and (min-width: 768px){
+
+
+.galeria{
+    .container .cartao-container{
+        .cartao-item:nth-child(3){ display: none;}
+    }
+}
+
+
+}
+
+
+@media only screen and (min-width: 1024px){
+
+    .hero{
+        min-height: 736px;
+        padding-top: 220px;
+        background-image: linear-gradient(120deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40%, rgba(1, 81, 201, 0) 60%), url(../img/background-desktop.png);
+        background-size: cover;
+        background-position: center;
+    
+        .content{
+            margin: 0;
+            h1{
+                margin-bottom: 20px;
+                font-size: 3.25rem;
+                text-align: left;
+            }
+    
+            p{
+                margin: 0 0 40px; 
+                max-width: 400px;
+                color: currentColor;
+                text-align: left;
+            }
+        }
+    }
+
+
+    .introducao{
+        padding-top: 120px;
+    
+        > p{ margin: 32px auto 56px;}
+    
+        ._dados{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+    
+            .__item{
+                width: 279px;
+                margin-bottom: 0;
+                p{ max-width: 200px; margin: 0 auto;}
+        
+            }
+    
+        }
+    }
+
+    .atividades{
+        margin-top: 120px;
+        padding: 120px 0;
+        display: flex;
+        background-image: linear-gradient(120deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40%, rgba(1, 81, 201, 0) 60%), url(../img/bg-atividades-mobile.png);
+        // background-attachment: fixed;
+    
+    }
+
+    .projetos{
+        margin-top: 0;
+        padding: 120px 0;
+        
+       .container { 
+           display: flex;
+           justify-content: space-between;
+           .content{ order: 2;}
+            > img{ display: block; margin: 0; max-width: 468px; order: 1;}
+       }
+    }
+
+
+    .principios{
+        margin-top: 0;
+        background-image: linear-gradient(180deg, rgba(1, 81, 201, 0.7) 0%, #0151C9 100%), url(../img/bg-principios.png);
+        margin-top: 0px;
+        padding: 120px 0;
+    
+            ._container-m-swipe{
+                position: relative;
+                padding: 0 1.25rem;
+    
+                .__item{
+                    display: block;
+                    color: $branco;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    visibility: hidden;
+    
+                    * { text-align: center;}
+                    p{ color: currentColor; margin-top: 16px; }
+    
+                    &.ativo{
+                        position: relative;
+                        visibility: visible;
+                    }
+    
+                }
+    
+            }
+    
+    }
+
+
+
+    .galeria{
+        margin-top: 0;
+        padding: 72px 0;
+
+    
+        .container {
+            .content{
+                max-width: 789px;
+                margin: 0 auto;
+                img{ margin: 0 auto 32px;}
+                h2, p{ text-align: center;}
+            }
+            .botao-cta {margin: 48px auto 0;}
+
+            .cartao-container{
+                .cartao-item:nth-child(3){
+                    display: block;
+                }
+            }
+
+        }
+    
+    }
+
+    .fale-conosco{
+        margin-top: 48px;
+        padding-top: 72px;
+        background: url(../img/bg-coracoes.png);
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+
+
+
+
+
+
+}
+
+
+@media only screen and (min-width: 1280px){
+    
+
+}
