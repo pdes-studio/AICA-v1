@@ -42,3 +42,55 @@ btnSubmenu.forEach( (botao, index) =>{
       temSubmenu[index].classList.toggle('submenu-ativo');
     });
 });
+
+
+
+
+
+
+const principiosBtn = document.querySelectorAll('._m-swipe ul li a');
+const principiosTexto = document.querySelectorAll('._container-m-swipe .__item');
+
+principiosBtn.forEach( (item, index) => {
+
+  item.addEventListener('click', function(e){
+    
+    const classe = 'ativo';
+    
+    e.preventDefault();
+
+    principiosBtn.forEach( (itemRemove) => {
+      itemRemove.classList.remove(`${classe}`);
+    });
+
+    principiosTexto.forEach( (itemRemove) => {
+      itemRemove.classList.remove(`${classe}`);
+    });
+
+    this.classList.add(`${classe}`);
+    principiosTexto[index].classList.add(`${classe}`);
+  });
+
+});
+
+
+
+const dataAnimate = document.querySelectorAll('.js [data-animate]');
+const segurancaTela = window.innerHeight * 0.7;
+
+
+function animateScroll(){
+  dataAnimate.forEach( (elemento) => {
+    const elementoTop = elemento.getBoundingClientRect().top - segurancaTela;
+    const animateClass = 'mi';
+
+    if(elementoTop < 0){
+        elemento.classList.add(`${animateClass}`);
+    }
+  });
+
+}
+
+animateScroll();
+
+window.addEventListener('scroll', animateScroll);

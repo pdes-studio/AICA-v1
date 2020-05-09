@@ -1,0 +1,82 @@
+@keyframes fade-top{
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.js [data-animate="fade-top"]{
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: all .7s;
+
+    &.mi{
+        animation: fade-top 1.4s ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes fade-right{
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.js [data-animate="fade-right"]{
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: all .7s;
+
+    &.mi{
+        animation: fade-right 1.4s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
+}
+
+.js [data-animate="fade"]{
+    opacity: 0;
+    transition: all .7s;
+
+    &.mi{
+        animation: fade 1.4s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes rotate{
+    0% { transform: rotate(0deg) scale(.1); opacity: 0; }
+    100% { transform: rotate(180deg) scale(1); opacity: 1;}
+}
+
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+
+.js .pontos, .js .icone{
+    opacity: 0;
+}
+
+.mi .pontos{
+    animation: rotate 1s ease-in-out;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+    transform-origin: center center;
+}
+
+.mi .icone{
+    animation: opacity 1s ease-in;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+

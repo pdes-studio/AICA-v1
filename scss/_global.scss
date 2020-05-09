@@ -112,6 +112,8 @@ h3{ font-size: 1.25rem; }
 
 span, a{ font-size: 1rem; }
 
+strong{ font-weight: $bold;}
+
 p{ 
 	line-height: 170%; 
 	font-size: 1rem; 
@@ -123,7 +125,7 @@ p{
 	margin-right: auto;
 }
 
-
+img{ max-width: 100%; height: auto;}
 
 
 .container{
@@ -156,9 +158,9 @@ p{
 .content {
 	max-width: 386px;
 	margin: 0 auto;
-	img.__icone{ 
+	svg.__icone{ 
 		display: block; 
-		max-width: 48px;
+		max-width: 36px;
 		margin: 0 auto 12px;
 	}
 
@@ -180,10 +182,11 @@ p{
 	overflow-x: auto;
 	margin: 32px auto;
 	padding: 0 20px;
-	max-width: 696px;
+	padding-inline-end: 20px;
+	max-width: 768px;
 	flex-flow: row;
 	> * {
-		width: 696px;
+		width: 768px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -198,18 +201,18 @@ p{
 .mobile-info{
 	color: $branco;
 	display: flex;
-	height: 56px;
+	height: 32px;
 	max-width: 276px;
-	margin: 32px auto 0;
+	margin: 32px auto;
 	padding: 14px 0;
 	border-radius: 8px;
 	justify-content: center;
 	align-items: center;
-	background: $verde-principal;
+	border: 2px solid $branco;
 
-	p{  color: currentColor; font-size: 14px; font-weight: $semibold; margin: 0; }
+	p{  color: currentColor; font-size: 14px; font-weight: $medium; margin: 0; }
 
-	img{ height: 32px; margin-right: 8px;}
+	img{ height: 24px; margin-right: 8px;}
 }
 
 
@@ -242,8 +245,8 @@ p{
 
 	.content {
 		margin: 0;
-		img.__icone{ 
-			height: 60px;
+		svg.__icone{ 
+			max-width: 48px;
 			display: block; 
 			margin: 0 0 24px;
 		}

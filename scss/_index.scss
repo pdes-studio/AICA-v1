@@ -1,9 +1,9 @@
 .hero{
     min-height: 560px;
     padding-top: 120px;
-    background-image: linear-gradient(180deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40.18%, rgba(1, 81, 201, 0) 130.09%), url(../img/background-mobile.png);
+    background-image: linear-gradient(180deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 50.18%, rgba(1, 81, 201, 0) 130.09%), url(../img/background-mobile.png);
     background-size: cover;
-    background-position: center;
+    background-position: right;
     // background-attachment: fixed;
 
     .content{
@@ -90,6 +90,7 @@
 
 .principios{
     margin-top: 72px;
+    min-height: 600px;
     padding: 48px 0;
     background-image: linear-gradient(180deg, rgba(1, 81, 201, 0.9) 0%, #0151C9 100%), url(../img/bg-principios-mobile.png);
     background-size: cover;
@@ -104,7 +105,7 @@
 
             ul li a { 
                 display: block;
-                img{ opacity: .3;}
+                img{ opacity: .3; transition: .3s ease-in-out;}
                 &.ativo img{  opacity: 1; }
             }
 
@@ -123,6 +124,8 @@
                 left: 0;
                 right: 0;
                 visibility: hidden;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
 
                 * { text-align: center;}
                 p{ color: currentColor; margin-top: 16px; }
@@ -130,6 +133,8 @@
                 &.ativo{
                     position: relative;
                     visibility: visible;
+                    opacity: 1;
+                    transition: opacity 1s linear;
                 }
 
             }
@@ -147,14 +152,18 @@
         margin-top: 48px;
     }
 
+    .container .__icone{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
-.fale-conosco{
+.doacoes{
     margin-top: 56px;
     padding-top: 72px;
-    background: url(../img/bg-coracoes-mobile.png);
-    background-size: cover;
     color: $branco;
+    background-color: $verde-escuro;
 
     h2{ color: currentColor}
     p{ color: currentColor}
@@ -172,6 +181,15 @@
 
     h2{ margin-bottom: 24px;}
     p{ text-align: center;}
+
+    .parceiros-itens{
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{ height: 72px; width: 144px; border-radius: 4px; background: $cinza; margin: 0 auto 24px;}
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -183,6 +201,10 @@
     }
 }
 
+.principios{
+    min-height: 480px;
+}
+
 
 }
 
@@ -190,8 +212,7 @@
 @media only screen and (min-width: 1024px){
 
     .hero{
-        min-height: 736px;
-        padding-top: 220px;
+        padding: 160px 0 120px;
         background-image: linear-gradient(120deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40%, rgba(1, 81, 201, 0) 60%), url(../img/background-desktop.png);
         background-size: cover;
         background-position: center;
@@ -215,7 +236,7 @@
 
 
     .introducao{
-        padding-top: 120px;
+        padding: 96px 0;
     
         > p{ margin: 32px auto 56px;}
     
@@ -235,8 +256,8 @@
     }
 
     .atividades{
-        margin-top: 120px;
-        padding: 120px 0;
+        margin-top: 0px;
+        padding: 96px 0;
         display: flex;
         background-image: linear-gradient(120deg, #0151C9 0%, rgba(1, 81, 201, 0.85) 40%, rgba(1, 81, 201, 0) 60%), url(../img/bg-atividades-mobile.png);
         // background-attachment: fixed;
@@ -245,11 +266,12 @@
 
     .projetos{
         margin-top: 0;
-        padding: 120px 0;
+        padding: 96px 0;
         
        .container { 
            display: flex;
            justify-content: space-between;
+           align-items: center;
            .content{ order: 2;}
             > img{ display: block; margin: 0; max-width: 468px; order: 1;}
        }
@@ -258,9 +280,9 @@
 
     .principios{
         margin-top: 0;
-        background-image: linear-gradient(180deg, rgba(1, 81, 201, 0.7) 0%, #0151C9 100%), url(../img/bg-principios.png);
+        background-image: linear-gradient(180deg, rgba(1, 81, 201, 0.8) 0%, #0151C9 100%), url(../img/bg-principios.png);
         margin-top: 0px;
-        padding: 120px 0;
+        padding: 96px 0;
     
             ._container-m-swipe{
                 position: relative;
@@ -293,7 +315,7 @@
 
     .galeria{
         margin-top: 0;
-        padding: 72px 0;
+        padding: 96px 0;
 
     
         .container {
@@ -315,10 +337,8 @@
     
     }
 
-    .fale-conosco{
-        margin-top: 48px;
-        padding-top: 72px;
-        background: url(../img/bg-coracoes.png);
+    .doacoes{
+        padding-top: 96px;
 
         .container{
             display: flex;
@@ -327,6 +347,15 @@
 
     }
 
+
+    .parceiros{
+        margin-top: 0;
+        padding: 96px 0 36px;
+
+        .parceiros-itens{
+            margin-top: 56px;
+        }
+    }
 
 
 
@@ -337,6 +366,6 @@
 
 
 @media only screen and (min-width: 1280px){
-    
+    .projetos .container > img{ max-width: 580.25px; }
 
 }

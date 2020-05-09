@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.93 72">
+<defs>
+<style>
+.cls-1{fill:#fff;}
+.cls-2{fill:none;stroke:#f77f40;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}
+
+@keyframes rotate{
+    0% { transform: rotate(0deg) scale(.1); }
+    100% { transform: rotate(180deg) scale(1); }
+}
+
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+
+#pontos{
+    animation: rotate 1s ease-in-out;
+    transform-origin: center center;
+}
+
+#icone{
+    animation: opacity 1s ease-in;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+</style>
+</defs>
+
+<g id="pontos">
+<path class="cls-1" d="M25.71,62.82a1.5,1.5,0,0,0-1.5,1.5V70.5a1.51,1.51,0,0,0,3,0V64.32A1.5,1.5,0,0,0,25.71,62.82Z"/>
+
+<path class="cls-1" d="M47,54.89a1.53,1.53,0,1,0-2.16,2.17l4.46,4.46a1.53,1.53,0,1,0,2.16-2.17Z"/>
+
+<path class="cls-1" d="M4.91,54.89.45,59.35a1.53,1.53,0,0,0,2.16,2.17l4.46-4.46a1.53,1.53,0,0,0-2.16-2.17Z"/>
+
+<path class="cls-1" d="M25.71,9.18a1.5,1.5,0,0,0,1.51-1.5V1.5a1.51,1.51,0,0,0-3,0V7.68A1.5,1.5,0,0,0,25.71,9.18Z"/>
+
+<path class="cls-1" d="M2.61,10.48A1.53,1.53,0,0,0,.45,12.65l4.46,4.46a1.53,1.53,0,0,0,2.16-2.17Z"/>
+
+<path class="cls-1" d="M47,17.11l4.46-4.46a1.53,1.53,0,0,0-2.16-2.17l-4.46,4.46A1.53,1.53,0,1,0,47,17.11Z"/>
+</g>
+
+<path id="icone" class="cls-2" d="M39.5,24.51a8.44,8.44,0,0,0-11.91,0L26,26.13l-1.62-1.62A8.42,8.42,0,1,0,12.43,36.42l1.62,1.63L26,50,37.87,38.05l1.63-1.63a8.44,8.44,0,0,0,0-11.91Z"/>
+
+</svg>

@@ -1,23 +1,12 @@
 footer{
-    margin-top: 104px;
-    padding-top: 48px;
+    margin-top: 48px;
+    padding-top: 32px;
     background: $azul-escuro;
     color: $branco;
 
     p, a{ font-size: 1rem;}
 
     a:hover{ opacity: 1;}
-
-    .footer_logo{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        > img{
-            flex-basis: 100%;
-            height: 80px; 
-            max-width: 160px;
-            margin-bottom: 24px;
-        }
 
         .social_links{
             flex-basis: 100%;
@@ -33,26 +22,25 @@ footer{
                 opacity: .2;
             }
         }
-    }
 
-    .footer_lists{
+    .footer_list{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 32px;
-        ul li > *{
+        li > *{
             color: currentColor;
             text-align: center;
             display: block;
         }
 
-        ul li h4 {
+        li h4 {
             font-size: 1rem;
             font-weight: $semibold;
             margin-bottom: 1rem;
         }
 
-        ul li a, ul li p{
+        li a, li p{
             margin-bottom: 0.75rem;
             color: $branco-medium;
             max-width: 335px;
@@ -61,7 +49,7 @@ footer{
             
         }
 
-        ul li a{
+        li a{
             font-weight: $semibold;
             &:hover{
                 color: $branco;
@@ -81,7 +69,7 @@ footer{
 
     .copyright{
         background: $azul-principal;
-        margin-top: 48px;
+        margin-top: 32px;
         height: 48px;
         width: 100%;
         display: flex;
@@ -90,6 +78,7 @@ footer{
 
         div{
             display: flex;
+            align-items: center;
             p{ display: block; color: currentColor; font-size: 14px;}
             img{ display: block; max-height: 36px; margin-left: 16px;}
         }
@@ -102,9 +91,11 @@ footer{
 @media only screen and (min-width: 1024px){
 
     footer{
+        padding-top: 0;
 
         .container{
-           display: flex;    
+           display: flex; 
+           display: none;   
     
         .footer_lists{
             width: 100%;
@@ -112,7 +103,7 @@ footer{
             justify-content: flex-end;
             margin-top: 0px;
 
-            ul li > *{
+            li > *{
                 text-align: left;
             }
     
@@ -139,6 +130,11 @@ footer{
         }
 
     }
+
+    .copyright{
+        margin-top: 0;
+    }
+
     
     }
 
